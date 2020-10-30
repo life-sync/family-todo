@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "557925828225",
+    "firebase_url": "https://family-todo-d26e4.firebaseio.com",
+    "project_id": "family-todo-d26e4",
+    "storage_bucket": "family-todo-d26e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557925828225:android:054fcf5203563a9173af80",
+        "android_client_info": {
+          "package_name": "com.lifesync.family_todolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557925828225-gasn75gfj04h411t6d97bcgsbmf26kgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5Bj5gOJoxIYaLpG4i78qH10lsRWTTMhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557925828225-gasn75gfj04h411t6d97bcgsbmf26kgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
