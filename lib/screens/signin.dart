@@ -1,3 +1,4 @@
+import 'package:family_todolist/screens/register.dart';
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
 
@@ -21,6 +22,15 @@ class _SignInState extends State<SignIn> {
                 fontFamily: "PlayFair-Display", fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.red[400],
+          actions: <Widget>[
+            FlatButton.icon(
+                icon: Icon(Icons.person_add),
+                label: Text("Register"),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Register()));
+                }),
+          ],
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
