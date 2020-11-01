@@ -1,4 +1,5 @@
-import 'package:family_todolist/screens/register.dart';
+import 'package:family_todolist/screens/authentication/register.dart';
+import 'package:family_todolist/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
 
@@ -121,8 +122,10 @@ class _SignInState extends State<SignIn> {
                           onPressed: () {
                             if (_formKey.currentState.validate()) {
                               print("Login Succesfull");
-                              print(email);
-                              print(pass);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Home()));
                             }
                           },
                         )

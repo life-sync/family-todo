@@ -1,4 +1,4 @@
-import 'package:family_todolist/screens/signin.dart';
+import 'package:family_todolist/screens/authentication/signin.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
