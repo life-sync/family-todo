@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   firebase_core: "^0.5.0+1"
   firebase_auth: "^0.18.1+2"
+  email_validator: '^1.0.5'
 
 
 dev_dependencies:
@@ -46,6 +47,16 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+fonts: 
+  - family: Merriweather
+    fonts: 
+      - asset: assets\fonts\Merriweather-Black.ttf
+      - asset: assets\fonts\Merriweather-Regular.ttf
+  - family: PlayFair-Display
+    fonts: 
+      - asset: assets\fonts\PlayfairDisplay-VariableFont_wght.ttf
+      
+    
 
   # To add assets to your application, add an assets section, like this:
   # assets:

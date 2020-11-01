@@ -1,3 +1,2 @@
 import 'package:firebase_auth/firebase_auth.dart';
-
-FirebaseAuth auth = FirebaseAuth.instance;
+import 'package:firebase_core/firebase_core.dart';
