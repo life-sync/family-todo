@@ -5,7 +5,7 @@ jobs:
     name: install dependencies
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout
+    - uses: actions/checkout@ion05-patch-1
       
     - name: install dependencies
       uses: ./action
