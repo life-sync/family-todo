@@ -17,6 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 # family-todo
 17/12/2020
 
-  -Packages Upgraded 
-  -New Branch Created
-  -Draft PR created
+  - Packages Upgraded 
+  - New Branch Created
+  - Draft PR created
