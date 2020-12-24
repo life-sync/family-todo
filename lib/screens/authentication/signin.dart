@@ -1,3 +1,4 @@
+import 'package:family_todolist/authentication/auth.dart';
 import 'package:family_todolist/screens/authentication/register.dart';
 import 'package:family_todolist/screens/home.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   String email = "";
   String pass = "";
@@ -55,7 +57,7 @@ class _SignInState extends State<SignIn> {
                           },
                           onChanged: (val) {
                             setState(() {
-                              val = email;
+                              email = val;
                             });
                           },
                           decoration: InputDecoration(
@@ -89,7 +91,7 @@ class _SignInState extends State<SignIn> {
                           obscureText: true,
                           onChanged: (val) {
                             setState(() {
-                              val = pass;
+                              pass = val;
                             });
                           },
                           decoration: InputDecoration(
@@ -119,13 +121,21 @@ class _SignInState extends State<SignIn> {
                                 backgroundColor: Colors.red[400],
                                 color: Colors.white),
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             if (_formKey.currentState.validate()) {
-                              print("Login Succesfull");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Home()));
+                              loading = true;
+                              dynamic result =
+                                  await _auth.signinWithEmailPass(email, pass);
+                              if (result == null) {
+                                return "Couldn't login with those credentials";
+                              } else {
+                                loading = false;
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Home()));
+                              }
+                              // print(email + pass);
                             }
                           },
                         )
