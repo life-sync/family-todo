@@ -30,15 +30,6 @@ class _RegisterState extends State<Register> {
                     fontWeight: FontWeight.bold),
               ),
               backgroundColor: Colors.red[400],
-              actions: <Widget>[
-                FlatButton.icon(
-                    icon: Icon(Icons.person_add),
-                    label: Text("Sign In"),
-                    onPressed: () {
-                      Navigator.pop(context,
-                          MaterialPageRoute(builder: (context) => SignIn()));
-                    }),
-              ],
             ),
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

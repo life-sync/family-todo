@@ -1,3 +1,4 @@
+import 'package:family_todolist/screens/authentication/home.dart';
 import 'package:family_todolist/screens/authentication/signin.dart';
 import 'package:family_todolist/screens/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -40,7 +41,7 @@ class Authenticate extends StatelessWidget {
     if (FirebaseUser != null) {
       return Home();
     } else {
-      return SignIn();
+      return Auth_Home();
     }
   }
 }
