@@ -30,15 +30,6 @@ class _RegisterState extends State<Register> {
                     fontWeight: FontWeight.bold),
               ),
               backgroundColor: Colors.red[400],
-              actions: <Widget>[
-                FlatButton.icon(
-                    icon: Icon(Icons.person_add),
-                    label: Text("Sign In"),
-                    onPressed: () {
-                      Navigator.pop(context,
-                          MaterialPageRoute(builder: (context) => SignIn()));
-                    }),
-              ],
             ),
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,37 +43,6 @@ class _RegisterState extends State<Register> {
                         key: _formKey,
                         child: Column(
                           children: <Widget>[
-                            // TextFormField(
-                            //   validator: (val) {
-                            //     if (val.isEmpty) {
-                            //       return "Please Enter a Value";
-                            //     } else {
-                            //       return null;
-                            //     }
-                            //   },
-                            //   onChanged: (val) {
-                            //     setState(() {
-                            //       val = username;
-                            //     });
-                            //   },
-                            //   decoration: InputDecoration(
-                            //     hintText: "Enter Your Name",
-                            //     hintStyle:
-                            //         TextStyle(fontFamily: "Plafair-Display"),
-                            //     icon: Icon(
-                            //       Icons.person,
-                            //       color: Colors.red[300],
-                            //     ),
-                            //     border: OutlineInputBorder(
-                            //       borderRadius: BorderRadius.circular(32.0),
-                            //       borderSide:
-                            //           BorderSide(color: Colors.red[300]),
-                            //     ),
-                            //   ),
-                            // ),
-                            // SizedBox(
-                            //   height: 30.0,
-                            // ),
                             TextFormField(
                               validator: (val) {
                                 if (EmailValidator.validate(val)) {
@@ -171,10 +131,10 @@ class _RegisterState extends State<Register> {
                                     return "Couldnt Register with those credentials";
                                   } else {
                                     loading = false;
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => Home()));
+                                    // Navigator.push(
+                                    //     context,
+                                    //     MaterialPageRoute(
+                                    //         builder: (context) => Home()));
                                     return null;
                                   }
                                 }
